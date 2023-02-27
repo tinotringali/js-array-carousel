@@ -1,13 +1,17 @@
 'use strict'
 
+//gruppo di immagini
 const imgs = ['01.webp', '02.webp', '03.webp', '04.webp', '05.webp' ]
-
-let imageGroupContent = '';
+//container HTML
+const slider = document.querySelector('.slider')
+//posizione immagini
 let active = 0;
 
-const slider = document.querySelector('.slider')
+//variabile che ci permette di interpolare le immagini nel file HTML
+let imageGroupContent = '';
 
 
+//Ciclo 
 for(let i = 0; i < imgs.length; i++){
     console.log(imgs[i]);
 
@@ -23,7 +27,7 @@ const down = document.querySelector('.down')
 const items = document.querySelectorAll('.image-group')
 console.log(items)
 
-
+//Interattività 
 up.addEventListener('click', function(){
     if(active > 0)
     items[active].classList.remove('show'); 
