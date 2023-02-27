@@ -3,9 +3,57 @@ ________
 Reset
 ________
  */
- 
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+.container{
+    max-width: 900px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider{
+    width: 800px;
+    height: 400px;
+    position: relative;
+    background-color: red;
+}
+
+.image-group{
+    height: 100%;
+    display: none;
+}
+
+.show{
+    display: block;
+}
+
+.image-group img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.arrow{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 5;
+    cursor: pointer;
+    color: white;
+}
+
+.arrow.down{
+    bottom: 10px;
+}
+
+.arrow.up{
+    top: 10px;
 }
